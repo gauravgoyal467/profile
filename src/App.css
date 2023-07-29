@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+*{
+  padding:0px;
+  margin:none;
+  font-family: 'Mulish', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: #f6f8fab0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p{
+  color:rgba(117, 117, 117, 1);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:50px;
+  background: white;
+  padding:40px;
+  width:30%;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 40px rgb(224, 217, 217) ;
+}
+.container{
+  display:flex;
+  flex-direction: column;
+  gap:25px;
+}
+.header span{
+  color:rgba(117, 117, 117, 1);
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
 }
 
-.App-link {
-  color: #61dafb;
+.inp{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+label{
+  color: rgba(51, 51, 51, 1);
+  font-weight: 600;
+}
+input{
+  font-size: 16px;
+  padding:12px;
+  width:350px;
+  border: 1px solid rgba(222, 222, 222, 1);
+  outline: none;
+  border-radius: 5px;
+}
+.btn{
+  font-size: 16px;
+  font-weight: 600;
+  padding:12px;
+  background-color:rgba(98, 91, 247, 1) ;
+  color:white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container p{
+  color:rgba(98, 91, 247, 1);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+.signUp{
+  display:flex;
+  gap:5px;
+}
+.signUp p{
+  font-size: 14px;
+}
+.signUp button{
+  border:none;
+  background: white;
+  color:rgba(98, 91, 247, 1);
+}
+ #error{
+  color:red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile img{
+
+  border:2px solid rgba(202, 201, 201, 0.801);
+  width:150px;
+  height:150px;
 }
