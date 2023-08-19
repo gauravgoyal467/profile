@@ -1,5 +1,5 @@
 # To view the deployment page go to the url below and use any of the given credentials
-https://profile-auth-six.vercel.app/
+https://signup-puce.vercel.app/
 
 1. "username": atuny0 ,"password":9uQFF1Lh
 2. "username": hbingley1 ,"password":CQutx25i8r
