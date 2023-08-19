@@ -4,7 +4,14 @@
   font-family: 'Mulish', sans-serif;
 }
 body{
-  background: #f6f8fab0;
+  background:linear-gradient(
+    20deg ,
+    white 0%,
+    white 50%,
+    #f6f8fab0 50%,
+    #f6f8fab0 100%  
+  ) ;
+  padding:45px;
 }
 p{
   color:rgba(117, 117, 117, 1);
@@ -13,11 +20,11 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:50px;
+  justify-self: center;
   background: white;
-  padding:40px;
-  width:30%;
-  margin: auto;
+  width:350px;
+  padding:20px 40px;
+  margin: auto;  
   margin-top: 50px;
   border-radius: 10px;
   box-shadow: 1px 1px 40px rgb(224, 217, 217) ;
@@ -72,13 +79,15 @@ input{
 .signUp{
   display:flex;
   gap:5px;
+  text-align: center;
+  justify-content: center;
 }
 .signUp p{
   font-size: 14px;
 }
 .signUp button{
   border:none;
-  background: white;
+  background: transparent;
   color:rgba(98, 91, 247, 1);
 }
  #error{

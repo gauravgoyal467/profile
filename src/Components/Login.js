@@ -5,37 +5,38 @@ const Login = () => {
     const[password,setPassword]=useState("");
     const[error,setError]=useState("");
 
-    async function handleClick(){
+    const handleClick = async () => {
       setError("");
-        fetch('https://dummyjson.com/auth/login', 
-        {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            username:email,
-            password:password,
-        })
-        })
-        .then(res => res.json())
-        .then(data=> {
-            if (data.id===undefined) {
-                setError(data.message);
-            }else {
-                console.log(data);
-                setEmail("");
-                setPassword("");
-            localStorage.setItem("loggedUser", JSON.stringify(data));
-            window.location.href = '/Profile';
-            }
-        })
-        .catch(err => console.log('Error during login:', err));      
-    }
+      try {
+        const response = await fetch('https://dummyjson.com/auth/login',  {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({username:email,password:password})
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          setEmail("");
+          setPassword("");
+          localStorage.setItem("loggedUser", JSON.stringify(data));
+          window.location.href = '/Profile';
+          
+        } else {
+          const errorData = await response.json();
+          setError(errorData.message);
+        }
+      } catch (error) {
+        console.log('An error occurred:', error);
+      }
+    };
+
 
   return (
+    <div>
     <div className="main-container">
       <div className="container">
         <div className="header">
-          <span>Welcome back!</span>
+          <img src="/image/welcome.png" alt="welcome Back!" />
           <h2>Sign in to your account</h2>
         </div>
         <div className="inputs">
@@ -52,11 +53,12 @@ const Login = () => {
         <p>Forget your password?</p>
         {error && <p id="error">{error}</p>} 
       </div>
-      <div className="signUp">
-        <p>Don't have an account?</p>
-        <button>Sign up</button>
-      </div>
     </div>
+    <div className="signUp">
+    <p>Don't have an account?</p>
+    <button>Sign up</button>
+  </div>
+  </div>
   );
 };
 
