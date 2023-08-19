@@ -1,3 +1,14 @@
+# To view the deployment page go to the url below and use any of the given credentials
+https://profile-auth-six.vercel.app/
+
+1. "username": atuny0 ,"password":9uQFF1Lh
+2. "username": hbingley1 ,"password":CQutx25i8r
+3. "username": rshawe2,"password": OWsTbMUgFc
+4. "username": yraigatt3,"password": sRQxjPfdS
+5. username": kmeus4,"password": aUTdmmmbH
+6. username": jtreleven5,"password": zY1nE46Zm
+7. for more visit https://dummyjson.com/users .
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
